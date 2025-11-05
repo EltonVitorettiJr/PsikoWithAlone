@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 export async function getYoutubeVideos() {
   const API_KEY = process.env.YOUTUBE_API_KEY;
   const PLAYLIST_ID = process.env.YOUTUBE_PLAYLIST_ID;

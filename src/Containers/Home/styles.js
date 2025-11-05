@@ -12,34 +12,6 @@ export const ContainerUpperPage = styled.section`
   height: 100%;
 `;
 
-export const Content = styled.div``;
-
-export const SubtitleContainer = styled.div`
-  display: flex;
-  justify-content: end;
-`;
-
-export const LogoButton = styled.button`
-  border: none;
-  background-color: transparent;
-
-  img {
-    width: 250px;
-  }
-`;
-
-export const FirstSubtitle = styled.h2`
-  text-align: center;
-  font-size: 11px;
-  margin-right: 62px;
-`;
-
-export const SecondSubtitle = styled.h2`
-  text-align: center;
-  font-size: 11px;
-  margin-right: 12px;
-`;
-
 export const Mask = styled.div``;
 
 export const ContainerMiddlePage = styled.section``;
