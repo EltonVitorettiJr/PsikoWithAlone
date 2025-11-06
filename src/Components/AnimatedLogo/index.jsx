@@ -11,7 +11,7 @@ export function AnimatedLogo() {
     setIsClicked(true);
     setTimeout(() => {
       navigate('/arts');
-    }, 5000);
+    }, 500);
   }
 
   return (
