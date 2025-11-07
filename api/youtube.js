@@ -1,7 +1,7 @@
 export default async function handler(request, response) {
   const API_KEY = process.env.YOUTUBE_API_KEY;
   const PLAYLIST_ID = process.env.YOUTUBE_PLAYLIST_ID;
-  const URL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${PLAYLIST_ID}&maxResults=10&key=${API_KEY}`;
+  const URL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${PLAYLIST_ID}&maxResults=15&key=${API_KEY}`;
 
   try {
     const apiResponse = await fetch(URL, {
@@ -15,7 +15,6 @@ export default async function handler(request, response) {
     }
 
     const data = await apiResponse.json();
-
     const videos =
       data.items?.map((video) => ({
         id: video.snippet.resourceId.videoId,
@@ -23,8 +22,6 @@ export default async function handler(request, response) {
         thumbnail: video.snippet.thumbnails.high.url,
         description: video.snippet.description,
       })) || [];
-
-    console.log(data);
 
     response.setHeader(
       'Cache-Control',

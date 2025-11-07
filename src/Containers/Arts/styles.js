@@ -12,6 +12,8 @@ export const VideosContainer = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  padding: 15px;
 `;
 
 export const Header = styled.header`
@@ -19,6 +21,7 @@ export const Header = styled.header`
   justify-content: center;
   width: 100%;
   margin: 10px 0;
+  border-bottom: 2px solid #c6c6c6ff;
 
   button {
     border: none;
@@ -27,7 +30,7 @@ export const Header = styled.header`
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 22px;
   }
 `;
@@ -35,4 +38,5 @@ export const Header = styled.header`
 export const LogoImg = styled.img`
   width: 70px;
   margin: 0 auto;
+  cursor: pointer;
 `;

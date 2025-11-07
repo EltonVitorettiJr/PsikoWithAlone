@@ -1,31 +1,32 @@
-import { useState, useEffect } from 'react'; // 1. Importe os hooks
-import { Container, Header, LogoImg } from './styles';
+import { Container, Header, LogoImg, VideosContainer } from './styles';
 import Logo from '../../assets/Logo.png';
 import { ListIcon } from '@phosphor-icons/react';
-import { getYoutubeVideos } from '../../Services/api';
+import { VideosCards } from '../../Components/videosCards';
+import { useNavigate } from 'react-router-dom';
 
 export function Arts() {
-  const [videos, setVideos] = useState([]);
+  const intagramVideo1 = ``;
 
-  useEffect(() => {
-    async function loadVideos() {
-      const videosData = await getYoutubeVideos();
-      setVideos(videosData);
-    }
-
-    loadVideos();
-  }, []);
-
+  const navigate = useNavigate();
   return (
     <Container>
       <Header>
-        <LogoImg src={Logo} />
+        <LogoImg
+          src={Logo}
+          onClick={() => {
+            navigate('/');
+          }}
+        />
         <button>
           <ListIcon size={'24px'} />
         </button>
       </Header>
       <VideosContainer>
-        <VideosCards></VideosCards>
+        <div
+          style={{ margin: '20px auto', maxWidth: '320px' }}
+          dangerouslySetInnerHTML={{ __html: intagramVideo1 }}
+        />
+        <VideosCards />
       </VideosContainer>
     </Container>
   );
