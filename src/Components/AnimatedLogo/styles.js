@@ -5,6 +5,8 @@ import LogoM from '../../assets/Logo-M.png';
 export const Container = styled.button`
   border: none;
   background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 `;
 
 export const LogoImg = styled.div`

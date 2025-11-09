@@ -1,12 +1,12 @@
 import { AnimatedLogo } from '../../Components/AnimatedLogo';
-import { ContainerUpperPage, MainContainer } from './styles';
+import { ContainerPage, MainContainer } from './styles';
 
 export function Home() {
   return (
     <MainContainer>
-      <ContainerUpperPage>
+      <ContainerPage>
         <AnimatedLogo />
-      </ContainerUpperPage>
+      </ContainerPage>
     </MainContainer>
   );
 }
