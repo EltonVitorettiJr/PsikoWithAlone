@@ -4,7 +4,7 @@ import SimplyLogo from '../../assets/Simply-Logo.png';
 import { FilterMenu } from '../../Components/FilterMenu';
 import { ListIcon } from '@phosphor-icons/react';
 import { FilterBar } from '../../Components/FilterBar';
-import { VideosCards } from '../../Components/videosCards';
+import { VideosCards } from '../../Components/VideosCards';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { categories } from '../../data/portfolioVideos';
