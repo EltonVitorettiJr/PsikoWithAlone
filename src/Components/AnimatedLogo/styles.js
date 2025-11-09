@@ -11,6 +11,8 @@ export const LogoImg = styled.div`
   background-image: url('${LogoM}');
   width: 250px;
   height: 224px;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 
   transition:
     transform 0.5s ease-out,

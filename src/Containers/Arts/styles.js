@@ -32,6 +32,9 @@ export const Header = styled.header`
     right: 20px;
     top: 32px;
   }
+
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 `;
 
 export const LogoImg = styled.img`
