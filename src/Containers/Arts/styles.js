@@ -12,8 +12,7 @@ export const VideosContainer = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  padding: 15px;
+  width: 100%;
 `;
 
 export const Header = styled.header`
@@ -30,13 +29,13 @@ export const Header = styled.header`
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: 15px;
-    top: 22px;
+    right: 20px;
+    top: 32px;
   }
 `;
 
 export const LogoImg = styled.img`
-  width: 70px;
-  margin: 0 auto;
+  width: 77px;
+  margin: 0 auto 10px;
   cursor: pointer;
 `;

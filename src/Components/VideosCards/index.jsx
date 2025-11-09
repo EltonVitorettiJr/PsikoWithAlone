@@ -1,32 +1,29 @@
-import { getYoutubeVideos } from '../../Services/api';
-import { ContentCard, VideoCard, VideoTitle } from './styles';
+import { memo, useEffect } from 'react';
+import { allVideos } from '../../data/portfolioVideos';
+import { ContentCard, VideoCard } from './styles';
 
-import { useState, useEffect } from 'react';
-
-export function VideosCards() {
-  const [videos, setVideos] = useState([]);
+function VideosCardsComponent({ selectedCategory }) {
+  const filteredVideos =
+    selectedCategory === 'Geral'
+      ? allVideos
+      : allVideos.filter((video) => video.category === selectedCategory);
 
   useEffect(() => {
-    async function loadVideos() {
-      const videosData = await getYoutubeVideos();
-      setVideos(videosData);
+    if (window.instgrm) {
+      window.instgrm.Embeds.process();
     }
-
-    loadVideos();
-  }, []);
+  }, [filteredVideos]);
 
   return (
     <ContentCard>
-      {/* {videos.map((video) => (
+      {filteredVideos.map((video) => (
         <VideoCard
           key={video.id}
-          href={`https://www.youtube.com/watch?v=${video.id}`}
-          target="_blank"
-        >
-          <img src={video.thumbnail} alt="video-thumbnail" />
-          <VideoTitle>{video.title}</VideoTitle>
-        </VideoCard>
-      ))} */}
+          dangerouslySetInnerHTML={{ __html: video.embedCode }}
+        />
+      ))}
     </ContentCard>
   );
 }
+
+export const VideosCards = memo(VideosCardsComponent);
