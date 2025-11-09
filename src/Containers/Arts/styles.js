@@ -35,7 +35,11 @@ export const Header = styled.header`
 `;
 
 export const LogoImg = styled.img`
-  width: 77px;
+  width: 120px;
   margin: 0 auto 10px;
   cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    width: 170px;
+  }
 `;

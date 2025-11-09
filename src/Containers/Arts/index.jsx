@@ -1,5 +1,5 @@
 import { Container, Header, LogoImg, VideosContainer } from './styles';
-import Logo from '../../assets/Logo.png';
+import SimplyLogo from '../../assets/Simply-Logo.png';
 import { VideosCards } from '../../Components/videosCards';
 import { FilterMenu } from '../../Components/FilterMenu';
 import { ListIcon } from '@phosphor-icons/react';
@@ -33,7 +33,7 @@ export function Arts() {
     <Container>
       <Header>
         <LogoImg
-          src={Logo}
+          src={SimplyLogo}
           onClick={() => {
             navigate('/');
           }}

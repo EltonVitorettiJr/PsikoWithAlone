@@ -13,6 +13,10 @@ export const LogoImg = styled.img`
 
   transform: ${(props) => (props.$isClicked ? 'scale(4)' : 'scale(1)')};
   opacity: ${(props) => (props.$isClicked ? 0 : 1)};
+
+  @media screen and (min-width: 768px) {
+    width: 350px;
+  }
 `;
 
 export const SubtitleContainer = styled.div`
