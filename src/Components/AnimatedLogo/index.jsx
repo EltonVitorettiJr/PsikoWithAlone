@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Container, LogoImg } from './styles';
 import { useNavigate } from 'react-router-dom';
+import Logo from '../../assets/Logo.svg';
 
 export function AnimatedLogo() {
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ export function AnimatedLogo() {
   return (
     <Container>
       <LogoImg
+        src={Logo}
         $isClicked={isClicked}
         onClick={() => {
           clickButton();

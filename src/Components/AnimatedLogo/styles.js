@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import LogoG from '../../assets/Logo-G.png';
-import LogoM from '../../assets/Logo-M.png';
 
 export const Container = styled.button`
   border: none;
@@ -9,10 +7,9 @@ export const Container = styled.button`
   outline: none;
 `;
 
-export const LogoImg = styled.div`
-  background-image: url('${LogoM}');
-  width: 250px;
-  height: 224px;
+export const LogoImg = styled.img`
+  width: 200px;
+
   -webkit-tap-highlight-color: transparent;
   outline: none;
 
@@ -24,8 +21,6 @@ export const LogoImg = styled.div`
   opacity: ${(props) => (props.$isClicked ? 0 : 1)};
 
   @media screen and (min-width: 768px) {
-    background-image: url('${LogoG}');
-    width: 351px;
-    height: 315px;
+    width: 350px;
   }
 `;
